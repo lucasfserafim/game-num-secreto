@@ -28,7 +28,7 @@ function verificarChute() {
         if (chute > numeroSecreto) {
             exibirTextoNaTela('p', 'numero secreto é menor');
         } else {
-            exibirTextoNaTela('p', 'numero secreto é menor');
+            exibirTextoNaTela('p', 'numero secreto é maior');
         }
         tentativas++;
         limparCampo();
@@ -37,8 +37,9 @@ function verificarChute() {
 }
 
 function gerarNumeroAleatorio() {
-    let numeroAleatorio = parseInt(Math.random() * numMaximo + 1);
+    let numeroAleatorio = parseInt(Math.random() *numMaximo + 1);
     let quantidadeNumAleatorios = listaDeNumerosAleatorios.length;
+
     if (quantidadeNumAleatorios == numMaximo) {
         listaDeNumerosAleatorios = [];
     }
@@ -50,7 +51,7 @@ function gerarNumeroAleatorio() {
         return numeroAleatorio;
     }
         
-    }
+
 }
 
 function limparCampo() {
